@@ -1,5 +1,5 @@
 //Query Selector
-let form = document.querySelector('#input-form');
+let form = document.querySelector('#card');
 let searchBtn = document.querySelector('#searchBtn');
 let searchUser = document.querySelector('#searchUser');
 
