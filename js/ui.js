@@ -33,25 +33,19 @@ class UI {
         this.profile.innerHTML = "";
     }
 
-    showAlert(msg, className) {
-        this.clearAlert();
+    showAlert(message, className) {
         this.clearProfile();
-        var div = document.createElement('div');
-        div.className = className;
-        div.appendChild(document.createTextNode(msg));
-        var container = document.querySelector('.container');
-        var form_div = document.querySelector('.form-div');
+        let div = document.createElement('div');
+        div.className = `alert ${className}`;
+        div.appendChild(document.createTextNode(message));
+        let container = document.querySelector('.container');
+        let form_div = document.querySelector('.form-div');
         container.insertBefore(div, form_div);
 
-        setTimeout(function() {
-            div.remove();
+        setTimeout(()=>{
+            document.querySelector('.alert').remove();
         }, 3000);
     }
-
-    clearAlert() {
-        var currentAlert = document.querySelector('.alert');
-        if(currentAlert) {
-            currentAlert.remove();
-        }
-    }
+ 
+      
 }
