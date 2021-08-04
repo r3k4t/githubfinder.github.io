@@ -1,4 +1,4 @@
-// UI Class
+
 class UI {
     constructor() {
         this.profile = document.querySelector('#profile')
@@ -36,11 +36,11 @@ class UI {
     showAlert(msg, className) {
         this.clearAlert();
         this.clearProfile();
-        let div = document.createElement('div');
+        var div = document.createElement('div');
         div.className = className;
         div.appendChild(document.createTextNode(msg));
-        let container = document.querySelector('.container');
-        let form_div = document.querySelector('.form-div');
+        var container = document.querySelector('.container');
+        var form_div = document.querySelector('.form-div');
         container.insertBefore(div, form_div);
 
         setTimeout(function() {
@@ -49,7 +49,7 @@ class UI {
     }
 
     clearAlert() {
-        let currentAlert = document.querySelector('.alert');
+        var currentAlert = document.querySelector('.alert');
         if(currentAlert) {
             currentAlert.remove();
         }
