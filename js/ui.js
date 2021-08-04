@@ -33,6 +33,29 @@ class UI {
         this.profile.innerHTML = "";
     }
 
+    
+     showAlert(msg, className) {
+        this.clearAlert();
+        this.clearProfile();
+        let div = document.createElement('div');
+        div.className = className;
+        div.appendChild(document.createTextNode(msg));
+        let container = document.querySelector('.container');
+        let form_div = document.querySelector('.form-div');
+        container.insertBefore(div, form_div);
+
+        setTimeout(function() {
+            div.remove();
+        }, 3000);
+    }
+
+    clearAlert() {
+        let currentAlert = document.querySelector('.alert');
+        if(currentAlert) {
+            currentAlert.remove();
+        }
+    }
+}
     showAlert(message, className) {
         this.clearProfile();
         let div = document.createElement('div');
