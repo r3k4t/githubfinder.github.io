@@ -21,9 +21,13 @@ form.addEventListener('submit', (e) => {
                     console.log(data);
                     ui.showProfile(data);
                 }
-               )}
-             }else {
-               ui.clearProfile();
-            }
-            e.preventDefault();
+                })
+            .catch(err => {
+                console.log(err);
             })
+    } else {
+        ui.clearProfile();
+    }
+
+    e.preventDefault();
+});
