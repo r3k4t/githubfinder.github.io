@@ -1,9 +1,9 @@
 // Query Selector
-var form = document.querySelector('#card');
-var searchBtn = document.querySelector('#searchBtn');
-var searchUser = document.querySelector('#searchUser');
+let form = document.querySelector('#card');
+let searchBtn = document.querySelector('#searchBtn');
+let searchUser = document.querySelector('#searchUser');
 
-var ui = new UI();
+let ui = new UI();
 
 // Add Event Listener
 form.addEventListener('submit', (e) => {
