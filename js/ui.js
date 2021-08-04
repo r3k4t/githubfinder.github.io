@@ -1,4 +1,4 @@
-
+// UI Class
 class UI {
     constructor() {
         this.profile = document.querySelector('#profile')
