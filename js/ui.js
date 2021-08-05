@@ -3,7 +3,8 @@ class UI {
     constructor() {
         this.profile = document.querySelector('#profile')
     }
-
+    
+    // Display Profile in UI
     showProfile(user) {
         this.clearAlert();
         this.profile.innerHTML = `<div class="card card-body mb-3">
@@ -29,27 +30,32 @@ class UI {
                                 </div>`; 
     }
 
+    // Clear the profile
     clearProfile() {
         this.profile.innerHTML = "";
     }
-
+    
+    // Show Alert Message
     showAlert(message, className) {
         this.clearAlert();
         this.clearProfile();
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.className = className;
         div.appendChild(document.createTextNode(message));
-        var container = document.querySelector('#alertMessage');
-        var form_div = document.querySelector('#form-div');
+        let container = document.querySelector('#alertMessage');
+        let form_div = document.querySelector('#form-div');
         container.insertBefore(div, form_div);
-
+        
+        
+        // Timeout after 1 sec
         setTimeout(()=>{
             div.remove();
         },1000)
     }
-
+     
+    // Clear alert message
     clearAlert() {
-        var currentAlert = document.querySelector('.alert');
+        let currentAlert = document.querySelector('.alert');
         if(currentAlert) {
             currentAlert.remove();
         }
