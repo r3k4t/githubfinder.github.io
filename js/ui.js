@@ -4,7 +4,7 @@ class UI {
         this.profile = document.querySelector('#profile')
     }
     
-    // Display Profile in UI
+    // Display Profile in UI class
     showProfile(user) {
         this.clearAlert();
         this.profile.innerHTML = `<div class="card card-body mb-3">
