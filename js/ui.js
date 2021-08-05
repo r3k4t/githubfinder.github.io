@@ -1,4 +1,4 @@
-
+// UI class 
 class UI {
     constructor() {
         this.profile = document.querySelector('#profile')
@@ -33,19 +33,19 @@ class UI {
         this.profile.innerHTML = "";
     }
 
-    showAlert(msg, className) {
+    showAlert(message, className) {
         this.clearAlert();
         this.clearProfile();
         var div = document.createElement('div');
         div.className = className;
-        div.appendChild(document.createTextNode(msg));
-        var container = document.querySelector('.container');
-        var form_div = document.querySelector('.form-div');
+        div.appendChild(document.createTextNode(message));
+        var container = document.querySelector('#alertMessage');
+        var form_div = document.querySelector('#form-div');
         container.insertBefore(div, form_div);
 
-        setTimeout(function() {
+        setTimeout(()=>{
             div.remove();
-        }, 3000);
+        },1000)
     }
 
     clearAlert() {
@@ -55,3 +55,4 @@ class UI {
         }
     }
 }
+
