@@ -15,10 +15,10 @@ form.addEventListener('submit', (e) => {
             .then(response => response.json())
             .then(data => {
                 if(data.message === 'Not Found') {
-                    // show alert
+                    // Show alert
                     ui.showAlert('User not found','error');
                 } else {
-                    // show profile
+                    // Show profile
                     console.log(data);
                     ui.showProfile(data);
                 }
@@ -27,6 +27,7 @@ form.addEventListener('submit', (e) => {
                 console.log(err);
             })
     } else {
+        // Clear Profile
         ui.clearProfile();
     }
 
